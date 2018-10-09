@@ -94,6 +94,7 @@ class PayrollController extends \AdminBaseController {
 		}
 		
         //echo '<pre>'; print_r($this->data['employees']); echo '</pre>';	exit;
+        //echo '<pre>'; print_r($this->data['cuttings']); echo '</pre>';	exit;
 		//echo '<pre>'; print_r($this->data['a']); echo '</pre>'; exit;		
 		return View::make('admin.payroll.index', $this->data);
 	} 

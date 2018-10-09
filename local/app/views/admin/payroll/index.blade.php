@@ -70,18 +70,19 @@ exit;
 							</tr>
 							</thead>
 							<tbody>
+							 
 							
-							
-					         @foreach ($cuttings as $k => $v)
+					         @foreach ($employees as $k => $v)
 							 <tr>
-								<td class="text-center"> {{ $k }} </td>
+								<td class="text-center"> {{ $v->employeeID }} </td>
 								<td class="text-center"> 
 								<?php 
-								foreach($v as $k2 => $v2)
-								{
-								  echo $k2.'='.$v2.'<br/>';
-								}
-								?> 
+								//echo $v->employeeID.'===';
+							    //echo $cuttings['udaya12']['late'];
+							    echo 'Late = '.$cuttings[$v->employeeID]['late'];
+							    //echo 'Casual = '.$cuttings[$v->employeeID]['casual'];
+							    //exit(); 
+							    ?>
 								</td>
 								<td class="text-center">  </td>
 								<td class="text-center">  </td>
