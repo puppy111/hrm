@@ -1,0 +1,81 @@
+
+Hi.
+
+In this video.
+
+I will explain to you about.
+
+How our Laundry Management System actually works.
+
+This System Mainly Consist of the following modules.
+
+one. Retail Booking Module.
+
+two. Commercial Booking Module.
+
+three. Payment Reports.
+
+four. Sales Reports.
+
+and finally five. Profit and Loss.
+
+
+Okay , Now Let's straightly , dive-in . to our Administrator Panel , to understand this system , in detail.
+
+After successful login , into our Administrator Panel . 
+The very first screen , that gets loaded , is the admin dashboard screen .
+
+In the Admin Dashboard Screen. 
+The First Half Screen , shows you the details of current retail order stages.
+And In the Second Half Screen . You will find some Graphical  representations.
+In The very first row . you will get retail booking , daily and monthly revenue details. 
+Where as in the second and third row , you can find , Commercial Bookings , daily and monthly revenue details.
+Okay, That was all about the dashboard screen.
+
+Now lets navigate and understand our next screen , that is, Zones.
+ 
+In Retail Booking , We are segregating customer orders , based on their Zones.
+For Suppose, for a while , Let's assume , You are running a laundry business at Hyderabad.
+A big City Like Hyderabad , Has many areas , so the pick-up and delivery process , becomes tedious and even time consuming.
+So In this software , we are dividing areas based on zones. 
+While Adding a particular area , you need to give an area name and assign a sorting number to it.
+Sorting number is given based on google route map,Which ever area comes first in that zone ,is assigned sorting numbers as 1, and next as 2 and so on.
+Assigning a sorting number helps the pick-up van to pick-up and deliver orders in a systematic manner.
+This makes the delivery process fast and efficient.
+So, this was about the zones.
+
+Now, Lets move to Retail Booking Loads Menu.
+
+Load is nothing but a system generated alpha numeric name , that is assigned to daily morning and evening slots.
+1. Morning Slot which starts daily from 6 PM to 12.55 AM.
+2. Evening Slot Which starts daily from 1 PM to 5.59 PM.
+
+For suppose , if a customer places an order today at 3pm , then he will be allocated to slot 2.
+  
+Okay, Now lets move to the next menu Cloth Types.
+
+In this module, you can add cloth names and there respective prices under a category like men,women,house hold etc.
+Here, we have a service type dropdown , where you can differentiate  
+
+
+
+
+
+
+
+
+
+
+
+
+
+Okay, Now Let's Get Started with our very first module. that is. the Retail Booking.
+
+In Retail Booking, our retail customers. can place orders. using 3 different ways. 
+
+one. through website. 
+two. through Mobile App.
+three. by calling Tollfree.
+
+
+
