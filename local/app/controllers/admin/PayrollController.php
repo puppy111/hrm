@@ -28,7 +28,14 @@ class PayrollController extends \AdminBaseController {
             									   ->where('employees.status','=','active')
             									   ->get();
             									   //->toArray()
-        
+            									   
+		$this->data1['leavetypes']              =    DB::table('leavetypes')->select('leaveType','num_of_leave')->get(); 
+		
+		foreach($this->data1['leavetypes'] as $k1 => $v1)
+		{
+			$this->data['leavetypes'][$v1->leaveType] = $v1->num_of_leave;
+		}
+
        //echo '<pre>'; print_r($this->data['employees']); echo '</pre>';	exit;
        //$this->data['leaves'] = PayRoll::absentEveryEmployee();
 	   //Office Working Hours

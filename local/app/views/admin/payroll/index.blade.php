@@ -62,8 +62,8 @@ exit;
 							<tr>
 								<th> EmployeeID </th>
 								<th> Leaves </th>
-								<th> Salary </th>
-								<th> Cuttings </th>
+								<th> Basic Salary </th>
+								<th> Loss Of Pay </th>
 								<th> Remaining Salary </th>
 								<th> Status</th>
 								<th> Action </th>
@@ -71,22 +71,57 @@ exit;
 							</thead>
 							<tbody>
 							 
-							
+							<?php
+								//echo '<pre>'; print_r($leavetypes); echo '</pre>';
+								//echo '<pre>'; print_r($cuttings); echo '</pre>';
+							?>
 					         @foreach ($employees as $k => $v)
 							 <tr>
 								<td class="text-center"> {{ $v->employeeID }} </td>
 								<td class="text-center"> 
 								<?php 
-								//echo $v->employeeID.'===';
-							    //echo $cuttings['udaya12']['late'];
-							    echo 'Late = '.$cuttings[$v->employeeID]['late'];
-							    //echo 'Casual = '.$cuttings[$v->employeeID]['casual'];
-							    //exit(); 
+								$late_sal_cutting = array();
+								
+								if(isset($cuttings[$v->employeeID])){
+									
+								    foreach($cuttings[$v->employeeID] as $k1 => $v1)
+								    {
+									      echo $k1.' = '.$v1.'<br/>';
+									      
+									      $oneday_pay   = ($v->salary/30);
+									      $halfday_pay =  $oneday_pay/2;
+									  
+										  if($k1 == 'late' && $v1 > 1)
+										  {
+										  	  //$sal_cutting['late'] = round($halfday_pay*$v1);
+										  	  $sal_cutting['cc'] = round($halfday_pay*$v1);
+										  }
+										  
+										  //$leavetypes[$k1]
+										  if($k1 == 'casual' && $v1 > $leavetypes['casual'])
+										  {
+										  	  $sal_cutting['cc'] += round($oneday_pay*$v1);
+										  } 
+										  
+										  if($k1 == 'sick' && $v1 > $leavetypes['sick'])
+										  {
+										  	  $sal_cutting['cc'] += round($oneday_pay*$v1);
+										  } 
+										  
+									}
+                                }
+								
+								//echo '<pre>'; print_r($sal_cutting); echo '</pre>';
 							    ?>
+							    
+							    
 								</td>
-								<td class="text-center">  </td>
-								<td class="text-center">  </td>
-								<td class="text-center">  </td>
+								<td class="text-center"> {{ $v->salary }} </td>
+								<?php 
+							    //if()
+							    ?>
+								<td class="text-center"> <?php echo $sal_cutting['cc']; ?></td>
+								<td class="text-center"> <?php echo $v->salary-$sal_cutting['cc']; ?> </td>
 								<td class="text-center">  </td>
 								<td class="text-center">  </td>	
 							 </tr>	
